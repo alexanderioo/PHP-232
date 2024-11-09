@@ -14,22 +14,20 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/', function () {
     return view('home');
 })->name('home');
 
+// Страница "О нас"
 Route::get('/about', function () {
     return view('about');
 })->name('about');
 
+// Страница "Контакты"
 Route::get('/contacts', function () {
     $contacts = [
-        'Телефон: +7 (123) 456-78-90',
-        'Email: example@example.com',
-        'Адрес: ул. Примерная, д.1, г. Москва'
+        'Телефон' => '+7 (123) 456-78-90',
+        'Email' => 'info@example.com',
+        'Адрес' => 'г. Москва, ул. Примерная, д. 1',
     ];
-
-    return view('contacts', ['contacts' => $contacts]);
+    return view('contacts', compact('contacts'));
 })->name('contacts');

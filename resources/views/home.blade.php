@@ -1,3 +1,5 @@
+<!-- resources/views/home.blade.php -->
+
 @extends('layouts.layout')
 
 @section('content')

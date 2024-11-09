@@ -1,6 +1,3 @@
-```blade
-<!-- resources/views/contacts.blade.php -->
-
 @extends('layouts.layout')
 
 @section('content')
@@ -11,4 +8,4 @@
         @endforeach
     </ul>
 @endsection
-```
+
